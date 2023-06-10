@@ -5,6 +5,7 @@ require_once 'core/init.php';
 
 $user = new UserLogin(); //Current
 
+//-----
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ $user = new UserLogin(); //Current
 	<title>ABOUT US</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -24,17 +25,17 @@ $user = new UserLogin(); //Current
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.min.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 	<style>
-	blockquote {  
+	blockquote {
 		border-style: solid;
 		border-width: 5px;
 		font-size: 15px;
@@ -46,15 +47,15 @@ $user = new UserLogin(); //Current
 	</style>
 </head>
 <body class="animsition">
-	
+
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
-			
+
 			<?php include 'includes/top-header.php'; ?>
 			<!--  -->
-			<?php include 'includes/wrap-main-nav.php'; ?>	
+			<?php include 'includes/wrap-main-nav.php'; ?>
 		</div>
 	</header>
 
@@ -63,7 +64,7 @@ $user = new UserLogin(); //Current
 		<div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
 				<a href="index.php" class="breadcrumb-item f1-s-3 cl9">
-					Home 
+					Home
 				</a>
 
 				<span class="breadcrumb-item f1-s-3 cl9">
@@ -105,8 +106,8 @@ $user = new UserLogin(); //Current
 						</blockquote>
 						<blockquote>
 							<b class="text-danger">MISSION</b><hr>
-							<p>To prepare the students to become effective and competitive successful leaders of society capable of making sound contribution within the global market place</p>   
-						</blockquote> 
+							<p>To prepare the students to become effective and competitive successful leaders of society capable of making sound contribution within the global market place</p>
+						</blockquote>
 					</div>
 				</div>
 				<!-- Sidebar -->
@@ -129,7 +130,7 @@ $user = new UserLogin(); //Current
 									<div class="size-w-11">
 										<h6 class="p-b-4">
 											<a href="#" class="f1-s-5 cl3 hov-cl10 trans-03">
-											
+
 											</a>
 										</h6>
 
@@ -152,7 +153,7 @@ $user = new UserLogin(); //Current
 			</div>
 		</div>
 	</section>
-	
+
 	<!-- Footer -->
 	<?php include 'includes/footer.html'; ?>
 
@@ -164,7 +165,7 @@ $user = new UserLogin(); //Current
 	</div>
 
 
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
