@@ -6,7 +6,7 @@ require_once 'core/init.php';
 $user = new UserLogin(); //Current
 
 //-----
-
+//-------
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ $user = new UserLogin(); //Current
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css///material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->
