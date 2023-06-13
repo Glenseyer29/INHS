@@ -111,10 +111,18 @@
                                 <button type="submit" name="delete" class="btn btn-xs btn-danger" >DELETE</button>
                               </form>
 
+<<<<<<< HEAD
                               <form method="POST" action="admin.php?action=update" style="display:inline">
                               <input type="hidden" name="ID" value="<?php echo $row['ID'] ?>">
                               <button type="submit" name="update" class="btn btn-xs btn-primary" >EDIT</button>
+=======
+                              <form method="POST" action="admin.php?action=editAttendance" style="display:inline">
+                                <button type="submit" name="dit" class="btn btn-primary">EDIT</button>
+>>>>>>> b403761475987c2cd495122db6e2a36883a2df3d
                               </form>
+
+
+
                               </td>
 
                           </tr>
