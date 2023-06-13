@@ -13,6 +13,59 @@
 //                 $error;
 //             }
 // }
+
+$server = "localhost";
+$username = "root";
+$password = "";
+$dbname = "dbs";
+
+$conn = new mysqli($server, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+	if (isset($_POST['STUDENTID']) && isset($_POST['TIMEIN']) && isset($_POST['STATUS'])) {
+
+		$id = $_POST['ID'];
+		$studentId = $_POST['STUDENTID'];
+		$timeIn = $_POST['TIMEIN'];
+		$status = $_POST['STATUS'];
+
+		$updateQuery = "UPDATE studattendance SET STUDENTID = '$studentId', TIMEIN = '$timeIn', STATUS = '$status' WHERE ID = $id";
+
+		if ($conn->query($updateQuery) === TRUE) {
+			echo "Attendance updated successfully.";
+		} else {
+			echo "Error updating attendance: " . $conn->error;
+		}
+
+		header('Location: admin.php?action=attendanceRecord');
+
+	}
+} 
+
+
+    $id = $_POST['ID'];
+
+    $selectQuery = "SELECT * FROM studattendance WHERE ID = $id";
+    $result = $conn->query($selectQuery);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $studentId = $row['STUDENTID'];
+        $timeIn = $row['TIMEIN'];
+        $status = $row['STATUS'];
+    } else {
+        echo "Attendance record not found.";
+    }
+
+
+
+$conn->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,49 +121,48 @@
                             <div class="box-body">
 
 
-								<form id="editUser" action="" method="post">
-									<div class="row">
-										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="isbn"><font color="#EC0003">*</font> Name</label>
-											<div class="form-group">
-												<div class="row">
-													<div class="col-lg-8 col-md-8">
-														<input type="text" class="form-control" id="STUDENTID" name="STUDENTID" value="">
-													</div>
+								<form id="editUser" action="admin.php?action=editAttendance" method="POST">
 
+								<input type="text" name="ID" value="<?php echo $id; ?>" hidden>
+
+								<div class="row">
+									<div class="col-lg-6 col-md-6">
+										<label class="control-label" for="studentId"><font color="#EC0003">*</font> Student ID</label>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-lg-8 col-md-8">
+													<input type="text" class="form-control" id="studentId" name="STUDENTID" value="<?php echo $studentId; ?>">
 												</div>
 											</div>
 										</div>
 									</div>
+								</div>
 
-                                    <div class="row">
-										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="isbn"><font color="#EC0003">*</font>Date</label>
-											<div class="form-group">
-												<div class="row">
-													<div class="col-lg-8 col-md-8">
-														<input type="text" class="form-control" id="TIMEIN" name="TIMEIN" value="">
-													</div>
-
+								<div class="row">
+									<div class="col-lg-6 col-md-6">
+										<label class="control-label" for="timeIn"><font color="#EC0003">*</font> Time In</label>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-lg-8 col-md-8">
+													<input type="text" class="form-control" id="timeIn" name="TIMEIN" value="<?php echo $timeIn; ?>">
 												</div>
 											</div>
 										</div>
 									</div>
+								</div>
 
-                                    <div class="row">
-										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="isbn"><font color="#EC0003">*</font>Attendance</label>
-											<div class="form-group">
-												<div class="row">
-													<div class="col-lg-8 col-md-8">
-														<input type="text" class="form-control" id="isbn" name="STATUS" value="">
-													</div>
-
+								<div class="row">
+									<div class="col-lg-6 col-md-6">
+										<label class="control-label" for="status"><font color="#EC0003">*</font> Attendance</label>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-lg-8 col-md-8">
+													<input type="text" class="form-control" id="status" name="STATUS" value="<?php echo $status; ?>">
 												</div>
 											</div>
 										</div>
 									</div>
-
+								</div>
 
                                     <div class="clearfix"></div><hr />
                                     <div class="form-actions">
@@ -123,30 +175,32 @@
                                     <br />
                                 </form>
 								<!-- Modal -->
-													<div class="modal fade" id="editBookTitle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-													<div class="modal-dialog modal-lg" role="document">
-														<div class="modal-content">
-														<div class="modal-header">
-															<button type="button" class="close" data-dismiss="modal">&times;</button>
-															<h3 class="modal-title" id="exampleModalLabel">Edit Book ISBN</h3>
-														</div>
-														<div class="modal-body">
-															<form enctype="multipart/form-data" method="post" action="editBookQR.php">
-																<label class="control-label" for="newIsbn"><font color="#EC0003">*</font> International Stardand Book Number</label>
-																<div class="form-group">
-																	<input type="text" class="form-control" id="newIsbn" name="newIsbn" value="">
-																</div>
-																<input type="hidden" name="newID" value="">
-														</div>
-														<div class="modal-footer">
-															<button type="submit" class="btn btn-success" value="save"><i class="glyphicon glyphicon-edit"></i> Save</button>
-															<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-															</form>
-														</div>
-														</div>
+										<div class="modal fade" id="editBookTitle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog modal-lg" role="document">
+											<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h3 class="modal-title" id="exampleModalLabel">Edit Book ISBN</h3>
+											</div>
+											<div class="modal-body">
+												<form enctype="multipart/form-data" method="post" action="editBookQR.php">
+													<label class="control-label" for="newIsbn"><font color="#EC0003">*</font> International Stardand Book Number</label>
+													<div class="form-group">
+														<input type="text" class="form-control" id="newIsbn" name="newIsbn" value="">
 													</div>
-													</div>
-								<?php ?>
+													<input type="hidden" name="newID" value="">
+											</div>
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-success" value="save"><i class="glyphicon glyphicon-edit"></i> Save</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+												</form>
+											</div>
+											</div>
+										</div>
+										</div>
+								<?php 
+								
+								?>
                             </div><!-- /.box-body -->
                         </div><!-- /.box -->
 
@@ -166,26 +220,36 @@
 <script src="styles/admin/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-        var validator = $("#editUser").bootstrapValidator({
-			fields : {
-				username : {
-					message : "This field is required",
-					validators : {
-						notEmpty :{
-							message : "Username cannot be empty.",
-						},
-					}
-				},
-				userRole : {
-					message : "This field is required",
-					validators : {
-						notEmpty :{
-							message : "Please select a User Role.",
-						},
-					}
-			}
-		});
+    var validator = $("#editUser").bootstrapValidator({
+        fields: {
+            STUDENTID: {
+                message: "This field is required",
+                validators: {
+                    notEmpty: {
+                        message: "Student ID cannot be empty."
+                    }
+                }
+            },
+            TIMEIN: {
+                message: "This field is required",
+                validators: {
+                    notEmpty: {
+                        message: "Time in cannot be empty."
+                    }
+                }
+            },
+            STATUS: {
+                message: "This field is required",
+                validators: {
+                    notEmpty: {
+                        message: "Status cannot be empty."
+                    }
+                }
+            }
+        }
     });
+});
+
 </script>
 </body>
 </html>
