@@ -235,11 +235,7 @@
 								<li><a href="admin.php?action=listBooks"><i class="fa fa-angle-double-right"></i> View Books</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="admin.php?action=userList">
-                                <i class="fa fa-home"></i> <span>Create User</span>
-                            </a>
-                        </li>
+                      
                     </ul>
 				<?php }?>
 				<?php if($user->isResearchAdmin()) {?>

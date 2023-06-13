@@ -1,20 +1,20 @@
 <?php
-if (Input::exists()) {
-			$book = new Books();
+// if (Input::exists()) {
+// 			$book = new Books();
 
-            try {
-                $book->update(array(
-					'bookTitle' => Input::get('bookTitle'),
-					'author' => Input::get('author'),
-					'datePublished' => Input::get('datePublished'),
-                ), $_GET['id']);
+//             try {
+//                 $book->update(array(
+// 					'bookTitle' => Input::get('bookTitle'),
+// 					'author' => Input::get('author'),
+// 					'datePublished' => Input::get('datePublished'),
+//                 ), $_GET['id']);
 
-			Session::flash('Updated', 'Book Info has been successfully updated.');
-			Redirect::to('admin.php?action=listBooks');
-            } catch(Exception $e) {
-                $error;
-            }
-}
+// 			Session::flash('Updated', 'Book Info has been successfully updated.');
+// 			Redirect::to('admin.php?action=listBooks');
+//             } catch(Exception $e) {
+//                 $error;
+//             }
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,11 +36,7 @@ if (Input::exists()) {
 <!-- Bootstrap Validator CSS -->
 <link href="styles/admin/css/bootstrapValidator.min.css" rel="stylesheet">
 <link href="css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
-<title>IBA NATIONAL HIGH SCHOOL</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<title>INHS</title>
 </head>
 <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
@@ -51,12 +47,12 @@ if (Input::exists()) {
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Book Information
+                        Student Attendance Information
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="admin.php"><i class="fa fa-tachometer-alt"></i> Home</a></li>
-                        <li><a href="admin.php?action=userList">Student Lists</a></li>
-                        <li class="active">Edit Book Information</li>
+                        <li><a href=""><i class="fa fa-tachometer-alt"></i> Home</a></li>
+                        <li><a href="">Student Lists</a></li>
+                        <li class="active">Edit Attendance Information</li>
                     </ol>
                 </section>
 
@@ -65,69 +61,66 @@ if (Input::exists()) {
                     <div class="col-xs-12">
                         <div class="box box-primary">
                             <div class="box-header">
-                                <h3 class="box-title">Edit Book - <small><font color="#EC0003">*</font> required fields</small></h3>
+                                <h3 class="box-title">Edit Attendance</h3>
                                 <div class="pull-right box-tools">
                                     <button class="btn btn-primary btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                                     <button class="btn btn-primary btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
                                 </div><!-- /. tools -->
                             </div><!-- /.box-header -->
                             <div class="box-body">
-								<?php if(Session::exists('bookUpdated')){ ?>
-									<div class="alert alert-success">
-										<i class="glyphicon glyphicon-ok"></i> &nbsp;<?php echo Session::flash('bookUpdated'); ?>
-                                    </div>
-								<?php }?>
-                                <?php
-									$books = DB:: getInstance()->get('books', array('id','=',$_GET['id']));
-									foreach($books->results() as $books){
-									?>
+
+
 								<form id="editUser" action="" method="post">
 									<div class="row">
 										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="isbn"><font color="#EC0003">*</font> International Standard Book Number</label>
+											<label class="control-label" for="isbn"><font color="#EC0003">*</font> Name</label>
 											<div class="form-group">
 												<div class="row">
 													<div class="col-lg-8 col-md-8">
-														<input type="text" class="form-control" id="isbn" name="isbn" value="<?php echo $books->isbn; ?>" disabled>
+														<input type="text" class="form-control" id="STUDENTID" name="STUDENTID" value="">
 													</div>
-													<div class="col-lg-4 col-md-4">
-														<button type="button" class="btn btn-success" data-toggle="modal" data-target="#editBookTitle">
-															Edit ISBN
-														</button>
-													</div>
+
 												</div>
 											</div>
 										</div>
 									</div>
+
                                     <div class="row">
 										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="bookTitle"><font color="#EC0003">*</font> Book Title</label>
+											<label class="control-label" for="isbn"><font color="#EC0003">*</font>Date</label>
 											<div class="form-group">
-												<input type="text" class="form-control" id="bookTitle" name="bookTitle" value="<?php echo $books->bookTitle; ?>" >
+												<div class="row">
+													<div class="col-lg-8 col-md-8">
+														<input type="text" class="form-control" id="TIMEIN" name="TIMEIN" value="">
+													</div>
+
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-lg-3 col-md-3">
-											<label class="control-label" for="author"><font color="#EC0003">*</font> Author of the Book</label>
+
+                                    <div class="row">
+										<div class="col-lg-6 col-md-6">
+											<label class="control-label" for="isbn"><font color="#EC0003">*</font>Attendance</label>
 											<div class="form-group">
-												<input type="text" class="form-control" id="author" name="author" value="<?php echo $books->author; ?>" required>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3">
-											<label class="control-label" for="datePublished"><font color="#EC0003">*</font> Date of the Publication</label>
-											<div class="form-group">
-												<input type="text" class="form-control" id="datePublished" name="datePublished" value="<?php echo $books->datePublished; ?>" data-provide="datepicker" required>
+												<div class="row">
+													<div class="col-lg-8 col-md-8">
+														<input type="text" class="form-control" id="isbn" name="STATUS" value="">
+													</div>
+
+												</div>
 											</div>
 										</div>
 									</div>
+
+
                                     <div class="clearfix"></div><hr />
                                     <div class="form-actions">
-                                        <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+                                        <input type="hidden" name="token" value="">
                                         <button type="submit" class="btn btn-primary">
                                             <i class="fa fa-edit fa-fw"></i>&nbsp;Save Edits
                                         </button>
-                                        <button type="button" class="btn btn" onclick="window.location='admin.php?action=listBooks'">Cancel</button>
+                                        <button type="button" class="btn btn" onclick="window.location='admin.php?action=attendanceRecord'">Cancel</button>
                                     </div>
                                     <br />
                                 </form>
@@ -143,9 +136,9 @@ if (Input::exists()) {
 															<form enctype="multipart/form-data" method="post" action="editBookQR.php">
 																<label class="control-label" for="newIsbn"><font color="#EC0003">*</font> International Stardand Book Number</label>
 																<div class="form-group">
-																	<input type="text" class="form-control" id="newIsbn" name="newIsbn" value="<?php echo $books->isbn; ?>">
+																	<input type="text" class="form-control" id="newIsbn" name="newIsbn" value="">
 																</div>
-																<input type="hidden" name="newID" value="<?php echo $books->id; ?>">
+																<input type="hidden" name="newID" value="">
 														</div>
 														<div class="modal-footer">
 															<button type="submit" class="btn btn-success" value="save"><i class="glyphicon glyphicon-edit"></i> Save</button>
@@ -155,7 +148,7 @@ if (Input::exists()) {
 														</div>
 													</div>
 													</div>
-								<?php }?>
+								<?php ?>
                             </div><!-- /.box-body -->
                         </div><!-- /.box -->
 
