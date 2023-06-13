@@ -106,6 +106,7 @@
                               <td><?php echo $row['STATUS']; ?></td>
                               <td align="center">
 
+
                               <form method="POST" action="admin.php?action=delete" style="display:inline">
                                 <input type="hidden" name="ID" value="<?php echo $row['ID'] ?>">
                                 <button type="submit" name="delete" class="btn btn-xs btn-danger" >DELETE</button>
@@ -119,7 +120,7 @@
 
                           </tr>
                           <?php
-                      }//push
+                      }
                   } else {
                       echo "Error: " . $conn->error;
                   }
