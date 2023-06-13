@@ -11,7 +11,7 @@ $user = new UserLogin(); //Current
 	<title>CONTACT US</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -22,17 +22,17 @@ $user = new UserLogin(); //Current
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.min.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 	<style>
-	blockquote {  
+	blockquote {
 		border-style: solid;
 		border-width: 5px;
 		font-size: 15px;
@@ -44,15 +44,15 @@ $user = new UserLogin(); //Current
 	</style>
 </head>
 <body class="animsition">
-	
+
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
-			
+
 			<?php include 'includes/top-header.php'; ?>
 			<!--  -->
-			<?php include 'includes/wrap-main-nav.php'; ?>	
+			<?php include 'includes/wrap-main-nav.php'; ?>
 		</div>
 	</header>
 
@@ -61,7 +61,7 @@ $user = new UserLogin(); //Current
 		<div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
 				<a href="index.php" class="breadcrumb-item f1-s-3 cl9">
-					Home 
+					Home
 				</a>
 
 				<span class="breadcrumb-item f1-s-3 cl9">
@@ -103,7 +103,7 @@ $user = new UserLogin(); //Current
 						</form>
 					</div>
 				</div>
-				
+
 				<!-- Sidebar -->
 				<div class="col-md-5 col-lg-4 p-b-80">
 					<div class="p-l-10 p-rl-0-sr991">
@@ -118,7 +118,7 @@ $user = new UserLogin(); //Current
 							<ul class="p-t-35">
 								<li class="flex-wr-sb-s p-b-30">
 									<a href="#" class="size-w-10 wrap-pic-w hov1 trans-03">
-										<img src="images/history.jpg" alt="IMG">
+										<img src="" alt="IMG">
 									</a>
 
 									<div class="size-w-11">
@@ -151,7 +151,7 @@ $user = new UserLogin(); //Current
 		</div>
 	</section>
 
-	
+
 	<!-- Footer -->
 	<?php include 'includes/footer.html'; ?>
 
@@ -163,7 +163,7 @@ $user = new UserLogin(); //Current
 	</div>
 
 
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>

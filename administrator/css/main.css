@@ -167,7 +167,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*==================================================================
 [ Top-bar ]*/
 .topbar {
-  background-color: #0067a9;
+  background-color:  #092190;
 }
 
 .content-topbar {
@@ -1568,7 +1568,7 @@ a.breadcrumb-item:hover {
 .bg8 {background-color: #888;}
 .bg9 {background-color: #999;}
 .bg10 {background-color: #17b978;}
-.bg11 {background-color: #0067a9;}
+  .bg11 {background-color:  #092190;}
 
 
 /*---------------------------------------------*/
@@ -1794,7 +1794,7 @@ a.breadcrumb-item:hover {
 
 /*---------------------------------------------*/
 .hov-btn1:hover {
-  background-color: #17b978;
+  background-color: #0c1d5b;
   border-color: #17b978;
   color: #fff;
 }

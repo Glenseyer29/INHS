@@ -53,7 +53,10 @@
                     Attendance Record
                     <small>Control panel</small>
                 </h1>
-
+                <ol class="breadcrumb">
+                    <li><a href="admin.php"><i class="fa fa-tachometer-alt"></i> Home</a></li>
+                    <li class="active">Library Management System</li>
+                </ol>
             </section>
 
 
@@ -105,11 +108,12 @@
 
                               <form method="POST" action="admin.php?action=delete" style="display:inline">
                                 <input type="hidden" name="ID" value="<?php echo $row['ID'] ?>">
-                                <button type="submit" name="delete" class="btn btn-danger">DELETE</button>
+                                <button type="submit" name="delete" class="btn btn-xs btn-danger" >DELETE</button>
                               </form>
 
-                              <form method="POST" action="" style="display:inline">
-                                <a href="#" class="btn btn-primary">EDIT</a>
+                              <form method="POST" action="admin.php?action=update" style="display:inline">
+                              <input type="hidden" name="ID" value="<?php echo $row['ID'] ?>">
+                              <button type="submit" name="update" class="btn btn-xs btn-primary" >EDIT</button>
                               </form>
                               </td>
 
