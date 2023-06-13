@@ -116,7 +116,7 @@
                               <button type="submit" name="update" class="btn btn-xs btn-primary" >EDIT</button>
                               </form>
                               </td>
-
+//---
                           </tr>
                           <?php
                       }//push
