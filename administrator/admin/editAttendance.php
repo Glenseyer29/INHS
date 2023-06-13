@@ -13,14 +13,6 @@
 //                 $error;
 //             }
 // }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 
 $server = "localhost";
 $username = "root";
@@ -53,15 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		header('Location: admin.php?action=attendanceRecord');
 
 	}
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-} 
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 
 
     $id = $_POST['ID'];
@@ -82,13 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $conn->close();
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c71ffab3be94d159ba5558d9d39cab186a2e5a2c
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -144,24 +121,6 @@ $conn->close();
                             <div class="box-body">
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-								<form id="editUser" action="" method="post">
-									<div class="row">
-										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="isbn"><font color="#EC0003">*</font> Name</label>
-											<div class="form-group">
-												<div class="row">
-													<div class="col-lg-8 col-md-8">
-														<input type="text" class="form-control" id="STUDENTID" name="STUDENTID" value="">
-													</div>
-
-=======
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 								<form id="editUser" action="admin.php?action=editAttendance" method="POST">
 
 								<input type="text" name="ID" value="<?php echo $id; ?>" hidden>
@@ -173,35 +132,10 @@ $conn->close();
 											<div class="row">
 												<div class="col-lg-8 col-md-8">
 													<input type="text" class="form-control" id="studentId" name="STUDENTID" value="<?php echo $studentId; ?>">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c71ffab3be94d159ba5558d9d39cab186a2e5a2c
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 												</div>
 											</div>
 										</div>
 									</div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-                                    <div class="row">
-										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="isbn"><font color="#EC0003">*</font>Date</label>
-											<div class="form-group">
-												<div class="row">
-													<div class="col-lg-8 col-md-8">
-														<input type="text" class="form-control" id="TIMEIN" name="TIMEIN" value="">
-													</div>
-
-=======
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 								</div>
 
 								<div class="row">
@@ -211,35 +145,10 @@ $conn->close();
 											<div class="row">
 												<div class="col-lg-8 col-md-8">
 													<input type="text" class="form-control" id="timeIn" name="TIMEIN" value="<?php echo $timeIn; ?>">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c71ffab3be94d159ba5558d9d39cab186a2e5a2c
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 												</div>
 											</div>
 										</div>
 									</div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-                                    <div class="row">
-										<div class="col-lg-6 col-md-6">
-											<label class="control-label" for="isbn"><font color="#EC0003">*</font>Attendance</label>
-											<div class="form-group">
-												<div class="row">
-													<div class="col-lg-8 col-md-8">
-														<input type="text" class="form-control" id="isbn" name="STATUS" value="">
-													</div>
-
-=======
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 								</div>
 
 								<div class="row">
@@ -249,30 +158,11 @@ $conn->close();
 											<div class="row">
 												<div class="col-lg-8 col-md-8">
 													<input type="text" class="form-control" id="status" name="STATUS" value="<?php echo $status; ?>">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c71ffab3be94d159ba5558d9d39cab186a2e5a2c
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 												</div>
 											</div>
 										</div>
 									</div>
-<<<<<<< HEAD
 								</div>
-=======
-<<<<<<< HEAD
-								</div>
-=======
-<<<<<<< HEAD
-
-=======
-								</div>
->>>>>>> c71ffab3be94d159ba5558d9d39cab186a2e5a2c
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 
                                     <div class="clearfix"></div><hr />
                                     <div class="form-actions">
@@ -285,38 +175,6 @@ $conn->close();
                                     <br />
                                 </form>
 								<!-- Modal -->
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-													<div class="modal fade" id="editBookTitle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-													<div class="modal-dialog modal-lg" role="document">
-														<div class="modal-content">
-														<div class="modal-header">
-															<button type="button" class="close" data-dismiss="modal">&times;</button>
-															<h3 class="modal-title" id="exampleModalLabel">Edit Book ISBN</h3>
-														</div>
-														<div class="modal-body">
-															<form enctype="multipart/form-data" method="post" action="editBookQR.php">
-																<label class="control-label" for="newIsbn"><font color="#EC0003">*</font> International Stardand Book Number</label>
-																<div class="form-group">
-																	<input type="text" class="form-control" id="newIsbn" name="newIsbn" value="">
-																</div>
-																<input type="hidden" name="newID" value="">
-														</div>
-														<div class="modal-footer">
-															<button type="submit" class="btn btn-success" value="save"><i class="glyphicon glyphicon-edit"></i> Save</button>
-															<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-															</form>
-														</div>
-														</div>
-													</div>
-													</div>
-								<?php ?>
-=======
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 										<div class="modal fade" id="editBookTitle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 										<div class="modal-dialog modal-lg" role="document">
 											<div class="modal-content">
@@ -340,22 +198,9 @@ $conn->close();
 											</div>
 										</div>
 										</div>
-<<<<<<< HEAD
 								<?php
 
 								?>
-=======
-<<<<<<< HEAD
-								<?php
-
-								?>
-=======
-								<?php 
-								
-								?>
->>>>>>> c71ffab3be94d159ba5558d9d39cab186a2e5a2c
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
                             </div><!-- /.box-body -->
                         </div><!-- /.box -->
 
@@ -375,34 +220,6 @@ $conn->close();
 <script src="styles/admin/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        var validator = $("#editUser").bootstrapValidator({
-			fields : {
-				username : {
-					message : "This field is required",
-					validators : {
-						notEmpty :{
-							message : "Username cannot be empty.",
-						},
-					}
-				},
-				userRole : {
-					message : "This field is required",
-					validators : {
-						notEmpty :{
-							message : "Please select a User Role.",
-						},
-					}
-			}
-		});
-    });
-=======
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
     var validator = $("#editUser").bootstrapValidator({
         fields: {
             STUDENTID: {
@@ -433,13 +250,6 @@ $conn->close();
     });
 });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c71ffab3be94d159ba5558d9d39cab186a2e5a2c
->>>>>>> 0a540b686d9f7061fc5d6fec173c2836e432d96b
->>>>>>> 596a38f989e32e53c5d5ca0ac6143ba2fac2a6c4
 </script>
 </body>
 </html>
