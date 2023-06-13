@@ -39,7 +39,7 @@
 </head>
 <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
-        <?php 
+        <?php
 
           include_once 'navigation.php';
 
@@ -50,8 +50,8 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Dashboard
-                    <small>Control panel</small>
+                  SCAN STUDENT QR-CODE
+                    <small>START SCAN</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li class="active">Home or Dashboard</li>
@@ -71,7 +71,7 @@
 
              <?php
 
-             
+
 
              if (isset($_SESSION['error'])) {
 

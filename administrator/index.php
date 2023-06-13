@@ -136,8 +136,8 @@ if(Input::exists()) {
 								<option value="<?php echo $permission->id?>"><?php echo ucwords($permission->name) ?></option>
 								<?php }?>
 							</select>
-							<input class="bo-1-rad-3 bocl13 size-a-19 f1-s-13 cl5 plh6 p-rl-18 m-b-20" type="text" name="username" placeholder="Username*" required>
-							<input class="bo-1-rad-3 bocl13 size-a-19 f1-s-13 cl5 plh6 p-rl-18 m-b-20" type="password" name="password" placeholder="Password*" required>
+							<input class="bo-1-rad-3 bocl13 size-a-19 f1-s-13 cl5 plh6 p-rl-18 m-b-20" type="text" name="username" placeholder="Username" required>
+							<input class="bo-1-rad-3 bocl13 size-a-19 f1-s-13 cl5 plh6 p-rl-18 m-b-20" type="password" name="password" placeholder="Password" required>
 							<center>
 							<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 							<button type="submit" class="size-a-20 bg2 borad-3 f1-s-12 cl0 hov-btn1 trans-03 p-rl-15 m-t-20">

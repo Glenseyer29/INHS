@@ -4,13 +4,13 @@ require_once 'core/init.php';
 $user = new UserLogin(); //Current
 
 if (Input::exists()) {
-    if(Token::check(Input::get('token'))) {  
+    if(Token::check(Input::get('token'))) {
 		$class = new ClassInfo();
 		try {
 			$class->update(array(
 				'has_ended' => 1,
 			),Input::get('class_id'));
-			
+
 		Redirect::to('admin.php?action=startAttendance');
 		} catch(Exception $e) {
 			$error;
@@ -39,7 +39,11 @@ if (Input::exists()) {
 <link href="styles/admin/css/bootstrapValidator.min.css" rel="stylesheet">
 <!-- DATA TABLES -->
 <link href="styles/admin/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
-<title>SDSSU Cantilan Campus</title>
+<title>IBA NATIONAL HIGH SCHOOL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 <style>
 .video-box {
 	margin: auto;
@@ -77,7 +81,7 @@ if (Input::exists()) {
                         <div class="col-xs-12">
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title"><i class="fa fa-user-circle"></i>  Start Attendance</h3>                           
+                                    <h3 class="box-title"><i class="fa fa-user-circle"></i>  Start Attendance</h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
 									<div class="row">
@@ -101,7 +105,7 @@ if (Input::exists()) {
 												<div class="col-xs-7">
 													<div class="row">
 														<?php
-															$class_info = DB:: getInstance()->query("SELECT * FROM class_info WHERE id=".$_POST['class_info']."");							
+															$class_info = DB:: getInstance()->query("SELECT * FROM class_info WHERE id=".$_POST['class_info']."");
 															foreach($class_info->results() as $class_info){
 														?>
 														<div class="col-xs-2">
@@ -172,15 +176,15 @@ if (Input::exists()) {
 										</form>
 									</div>
 								</div><!-- /.box -->
-								
+
 							</div><!-- /.box -->
 						</div><!-- /.col -->
                     </div><!-- /.row (main row) -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-		
-	
+
+
 	<script src="js/jquery3.3.1.min.js"></script>
 	<script src="js/instascan.min.js"></script>
 	<script type="text/javascript">
@@ -222,4 +226,3 @@ if (Input::exists()) {
 	<script src="styles/admin/js/bootstrapValidator.min.js"></script>
 </body>
 </html>
-
