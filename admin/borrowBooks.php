@@ -2,9 +2,9 @@
 require_once 'core/init.php';
 
 $user = new UserLogin(); //Current
-	
+
 if (Input::exists()) {
-    if(Token::check(Input::get('token'))) {  
+    if(Token::check(Input::get('token'))) {
 			$books = DB::getInstance()->get('books', array('isbn','=',Input::get('qrcode')));
 			if ($books->count()){
 				foreach($books->results() as $books){
@@ -22,7 +22,7 @@ if (Input::exists()) {
 					}
 				}
 			}
-			
+
 			$booktransaction = new BookTransactions();
             try {
                 $booktransaction->create(array(
@@ -34,7 +34,7 @@ if (Input::exists()) {
 					'borrowerID' => Input::get('borrowerID'),
 					'borrower' => Input::get('borrower'),
                 ));
-			
+
 			Session::flash('Borrowed', 'New Book has been borrowed.');
 			Redirect::to('admin.php?action=startLibrarySystem');
             } catch(Exception $e) {
@@ -44,7 +44,7 @@ if (Input::exists()) {
 }
 
 
-	
+
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +67,11 @@ if (Input::exists()) {
 <link href="styles/admin/css/bootstrapValidator.min.css" rel="stylesheet">
 <!-- DATA TABLES -->
 <link href="styles/admin/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
-<title>SDSSU Cantilan Campus</title>
+<title>IBA NATIONAL HIGH SCHOOL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 <style>
 .video-box {
 	margin: auto;
@@ -105,7 +109,7 @@ if (Input::exists()) {
                         <div class="col-xs-12">
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title"><i class="fa fa-book"></i>  Borrow Books</h3>                           
+                                    <h3 class="box-title"><i class="fa fa-book"></i>  Borrow Books</h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
 									<div class="row">
@@ -167,7 +171,7 @@ if (Input::exists()) {
 															</div>
 														</div>
 													</div>
-													
+
 													<div class="row">
 														<div class="col-xs-12">
 															<h3>Input Borrower Info</h3>
@@ -220,15 +224,15 @@ if (Input::exists()) {
 										</form>
 									</div>
 								</div><!-- /.box -->
-								
+
 							</div><!-- /.box -->
 						</div><!-- /.col -->
                     </div><!-- /.row (main row) -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-		
-	
+
+
 	<script src="js/jquery3.3.1.min.js"></script>
 	<script src="js/instascan.min.js"></script>
 	<script type="text/javascript">
@@ -274,4 +278,3 @@ if (Input::exists()) {
 	<script src="styles/admin/js/bootstrapValidator.min.js"></script>
 </body>
 </html>
-
