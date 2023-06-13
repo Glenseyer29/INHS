@@ -97,16 +97,25 @@ $user = new UserLogin(); //Current
 						<p class="f1-s-11 cl6 p-b-25">
 						</p>
 						<blockquote>
-							<b class="text-danger">PHILOSOPHY</b><hr>
-							<p>Leaders of Distinction in Business, Industry and Society.</p>
-						</blockquote>
-						<blockquote>
 							<b class="text-danger">VISION</b><hr>
-							<p>A premier institution of higher learning in the Southern Tagalog Region committed to producing quality, technology-based and competitive graduates embodied with moral, social and ethical values who will be leaders in business, industry and society.</p>
+							<p>We dream of Filipinos  who passionately love their country and whose values and competencies enable them to realize their full potential and contribute meaningfully to building the nation</p> <br>
+							<p>As a learner centered public institution the department of education continously improves itself to better serves its stakeholders.</p>
 						</blockquote>
 						<blockquote>
 							<b class="text-danger">MISSION</b><hr>
-							<p>To prepare the students to become effective and competitive successful leaders of society capable of making sound contribution within the global market place</p>
+							<p>To protect and promote the right of every Filipino to quality, equitable, culture-based and complete basic education.</p><br><p>Where:</p><br><p>Students learn in a child-friendly gender sensitive
+							safe and motivating environment.</p><br><p>Teachers facilitate learning and constantly nurture every learner.</p><br><p>Administrators and staff, as stewards of  the institution ensure an enabling
+							and supportive environment for effective learning to happen.</p><br><p>Family, Community and other stakeholders are actively engaged and share responsibility for developing life-long learners.</p>
+						</blockquote>
+
+						<blockquote>
+							<b class="text-danger">Core Values</b><hr>
+						<ul>
+							<li>Makadiyos</li>
+							<li>Makatao</li>
+							<li>Makakalikasan</li>
+							<li>Makabansa</li>
+						</ul>
 						</blockquote>
 					</div>
 				</div>
@@ -124,7 +133,7 @@ $user = new UserLogin(); //Current
 							<ul class="p-t-35">
 								<li class="flex-wr-sb-s p-b-30">
 									<a href="#" class="size-w-10 wrap-pic-w hov1 trans-03">
-										<img src="images/history.jpg" alt="IMG">
+										<img src="" alt="IMG">
 									</a>
 
 									<div class="size-w-11">

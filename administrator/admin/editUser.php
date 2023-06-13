@@ -36,7 +36,11 @@ if (Input::exists()) {
 <link href="styles/admin/css/bootstrapValidator.min.css" rel="stylesheet">
 <!-- bootstrap wysihtml5 - text editor -->
 <link href="styles/admin/css/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
-<title>SDSSU Cantilan Campus</title>
+<title>IBA NATIONAL HIGH SCHOOL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 </head>
 <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
@@ -61,11 +65,11 @@ if (Input::exists()) {
                     <div class="col-xs-12">
                         <div class="box box-primary">
                             <div class="box-header">
-                                <h3 class="box-title">Edit User - <small><font color="#EC0003">*</font> required fields</small></h3>    
+                                <h3 class="box-title">Edit User - <small><font color="#EC0003">*</font> required fields</small></h3>
                             </div><!-- /.box-header -->
                             <div class="box-body">
-                                <?php 
-									$users = DB:: getInstance()->query("SELECT * FROM userlogin WHERE id=".$_GET['uid']."");							
+                                <?php
+									$users = DB:: getInstance()->query("SELECT * FROM userlogin WHERE id=".$_GET['uid']."");
 									foreach($users->results() as $users){
 									?>
 								<form id="editUser" action="" method="post">
@@ -82,7 +86,7 @@ if (Input::exists()) {
 												<select class="form-control" name="role" id="role">
 													<option hidden value="">Select Role</option>
 													<?php
-														$userRole = DB:: getInstance()->query("SELECT * FROM groups");							
+														$userRole = DB:: getInstance()->query("SELECT * FROM groups");
 														foreach($userRole->results() as $userRole){
 														if ($userRole->id == $users->permission){
 															$selected = 'selected';
@@ -94,7 +98,7 @@ if (Input::exists()) {
 													<?php }?>
 												</select>
                                             </div>
-										
+
                                         </div>
 									</div>
                                     <div class="clearfix"></div><hr />
@@ -106,8 +110,8 @@ if (Input::exists()) {
                                         <button type="button" class="btn btn" onclick="window.location='admin.php?action=userList'">Cancel</button>
                                     </div>
                                     <br />
-                                </form>         
-								<?php }?>                 
+                                </form>
+								<?php }?>
                             </div><!-- /.box-body -->
                         </div><!-- /.box -->
 
@@ -115,7 +119,7 @@ if (Input::exists()) {
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-                    
+
 <!-- jQuery 2.0.2 -->
 <script src="styles/admin/js/jquery.min.js"></script>
 <!-- Bootstrap -->
@@ -123,7 +127,7 @@ if (Input::exists()) {
 <!-- AdminLTE App -->
 <script src="styles/admin/js/AdminLTE/app.js" type="text/javascript"></script>
 <!-- Bootstrap Validator JS -->
-<script src="styles/admin/js/bootstrapValidator.min.js"></script>    
+<script src="styles/admin/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
         var validator = $("#editUser").bootstrapValidator({
