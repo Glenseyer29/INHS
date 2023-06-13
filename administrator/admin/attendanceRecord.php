@@ -111,9 +111,9 @@
                                 <button type="submit" name="delete" class="btn btn-xs btn-danger" >DELETE</button>
                               </form>
 
-                              <form method="POST" action="admin.php?action=update" style="display:inline">
+                              <form method="POST" action="admin.php?action=editAttendance" style="display:inline">
                               <input type="hidden" name="ID" value="<?php echo $row['ID'] ?>">
-                              <button type="submit" name="update" class="btn btn-xs btn-primary" >EDIT</button>
+                              <button type="submit" name="edit" class="btn btn-xs btn-primary" >EDIT</button>
                               </form>
                               </td>
 //---
