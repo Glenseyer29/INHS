@@ -119,7 +119,7 @@
 
                           </tr>
                           <?php
-                      }//push
+                      }
                   } else {
                       echo "Error: " . $conn->error;
                   }
