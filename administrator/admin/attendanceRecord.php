@@ -108,9 +108,12 @@
                                 <button type="submit" name="delete" class="btn btn-danger">DELETE</button>
                               </form>
 
-                              <form method="POST" action="" style="display:inline">
-                                <a href="#" class="btn btn-primary">EDIT</a>
+                              <form method="POST" action="admin.php?action=editAttendance" style="display:inline">
+                                <button type="submit" name="dit" class="btn btn-primary">EDIT</button>
                               </form>
+
+
+
                               </td>
 
                           </tr>
