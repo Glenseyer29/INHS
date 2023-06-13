@@ -134,6 +134,10 @@ if(!$user->isLoggedIn()) {
 				require('admin/delete.php');
 			break;
 
+			case 'editAttendance':
+				require('admin/editAttendance.php');
+			break;
+
 		  default:
 			require('admin/ldashboard.php');
 		}
